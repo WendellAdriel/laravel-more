@@ -16,3 +16,6 @@ build: ## Build all docker images.
 ##@ [Application]
 composer: ## Run composer commands. Specify the command e.g. via "make composer ARGS="install|update|require <dependency>"
 	docker-compose run app composer $(ARGS)
+
+prepare: ## Run the Linter
+	docker-compose run app ./vendor/bin/pint --preset psr12
