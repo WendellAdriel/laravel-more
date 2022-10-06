@@ -2,7 +2,7 @@ version: '3'
 
 services:
   app:
-    image: wendell_adriel/laravel-more
+    image: wendelladriel/laravel-more
     container_name: laravel-more
     build:
       context: .

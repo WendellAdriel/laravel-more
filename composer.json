@@ -1,12 +1,17 @@
 {
-    "name": "wendell_adriel/laravel-more",
+    "name": "wendelladriel/laravel-more",
     "description": "Implementation of the Repository Pattern using Laravel Model binding",
     "type": "library",
+    "keywords": ["laravel", "repository", "model", "data"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "WendellAdriel\\LaravelMore\\": "src/"
         }
+    },
+    "support": {
+        "issues": "https://github.com/WendellAdriel/laravel-more/issues",
+        "source": "https://github.com/WendellAdriel/laravel-more"
     },
     "authors": [
         {
@@ -15,19 +20,22 @@
         }
     ],
     "require": {
-        "php": "^8.0.2"
+        "php": "^8.0"
     },
     "require-dev": {
-        "illuminate/container": "^9.0",
-        "illuminate/database": "^9.0",
-        "illuminate/support": "^9.0",
+        "illuminate/container": "^7.0|^8.0|^9.0",
+        "illuminate/database": "^7.0|^8.0|^9.0",
+        "illuminate/support": "^7.0|^8.0|^9.0",
         "laravel/pint": "^1.0"
     },
     "extra": {
         "laravel": {
             "providers": [
                 "WendellAdriel\\LaravelMore\\LaravelMoreServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "LaravelMore": "WendellAdriel\\LaravelMore\\Facades\\LaravelMore"
+            }
         }
     }
 }
